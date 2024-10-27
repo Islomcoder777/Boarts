@@ -1,0 +1,55 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+li{
+    margin-left: 10px;
+}
+
+
+.sidebar{
+    animation: slide-sidebar 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94 ) both;
+}
+@keyframes slide-sidebar{
+    0%{
+        transform: translateY(100px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* Add this in your CSS/SCSS file */
+.navbar {
+    position: relative; /* Ensure it's positioned correctly */
+    z-index: 1000; /* Ensure it's on top of other content */
+  }
+/* Add this in your CSS/SCSS file */
+.swiper-container {
+    position: relative; /* Ensure it does not affect other content */
+    z-index: 1; /* Ensure it's below the Navbar */
+  }
+/* Add these media queries in your CSS/SCSS file */
+@media (max-width: 768px) {
+    .navbar {
+      /* Adjust Navbar styles for smaller screens */
+      position: fixed; /* Ensures Navbar stays on top */
+      width: 100%;
+      height: 40px;
+
+    }
+  
+    .swiper-container {
+      /* Adjust Swiper styles if needed */
+      margin-top: 2px; /* Make space for the fixed Navbar */
+
+    }
+    .scet{
+      display: grid;
+      gap: 20px;
+    }
+    
+  }
+      
